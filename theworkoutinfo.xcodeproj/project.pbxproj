@@ -15,9 +15,21 @@
 		44153525205AF71F0093EFE4 /* Configuration-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44153524205AF71F0093EFE4 /* Configuration-Debug.plist */; };
 		44153527205AF73F0093EFE4 /* Configuration-Testing.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44153526205AF73F0093EFE4 /* Configuration-Testing.plist */; };
 		44153529205AF7590093EFE4 /* Configuration-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44153528205AF7590093EFE4 /* Configuration-Release.plist */; };
+		4415352E205C0DA70093EFE4 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415352D205C0DA70093EFE4 /* BaseCoordinator.swift */; };
+		44153530205C0DB60093EFE4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415352F205C0DB60093EFE4 /* AppCoordinator.swift */; };
+		44153532205C0DC40093EFE4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44153531205C0DC40093EFE4 /* LoginCoordinator.swift */; };
+		44153539205C44760093EFE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44153537205C44760093EFE4 /* LoginViewController.swift */; };
+		4415353A205C44760093EFE4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44153538205C44760093EFE4 /* LoginViewController.xib */; };
+		4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415353B20601D860093EFE4 /* LoginViewModel.swift */; };
+		4415353F2062A7370093EFE4 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415353E2062A7370093EFE4 /* AuthenticationManager.swift */; };
+		441535422062AF440093EFE4 /* AuthenticationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441535412062AF440093EFE4 /* AuthenticationHelper.swift */; };
+		444102C42073F5F6001837CD /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */; };
+		666208B10412D381CEFB0318 /* Pods_theworkoutinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21C9A29E3C85AE9CAF9466BB /* Pods-theworkoutinfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.debug.xcconfig"; sourceTree = "<group>"; };
+		22C52C7A5DC333C088AB513A /* Pods-theworkoutinfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.release.xcconfig"; sourceTree = "<group>"; };
 		44153507205ADE500093EFE4 /* theworkoutinfo Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "theworkoutinfo Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4415350A205ADE500093EFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44153511205ADE500093EFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +40,17 @@
 		44153524205AF71F0093EFE4 /* Configuration-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Configuration-Debug.plist"; sourceTree = "<group>"; };
 		44153526205AF73F0093EFE4 /* Configuration-Testing.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Configuration-Testing.plist"; sourceTree = "<group>"; };
 		44153528205AF7590093EFE4 /* Configuration-Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Configuration-Release.plist"; sourceTree = "<group>"; };
+		4415352D205C0DA70093EFE4 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		4415352F205C0DB60093EFE4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		44153531205C0DC40093EFE4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		44153537205C44760093EFE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		44153538205C44760093EFE4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4415353B20601D860093EFE4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4415353E2062A7370093EFE4 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		441535412062AF440093EFE4 /* AuthenticationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHelper.swift; sourceTree = "<group>"; };
+		444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
+		74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theworkoutinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.testing.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.testing.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666208B10412D381CEFB0318 /* Pods_theworkoutinfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +70,8 @@
 			children = (
 				44153509205ADE500093EFE4 /* theworkoutinfo */,
 				44153508205ADE500093EFE4 /* Products */,
+				794C55274CCCFDF09C3E9830 /* Pods */,
+				8B3868BA2974993561143608 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,12 @@
 		44153509205ADE500093EFE4 /* theworkoutinfo */ = {
 			isa = PBXGroup;
 			children = (
+				444102C12073F5C0001837CD /* Shared */,
+				441535402062AF0C0093EFE4 /* Helpers */,
+				4415353D2062A0970093EFE4 /* Managers */,
+				4415352C205C0C120093EFE4 /* Coordinators */,
+				4415352B205C0C070093EFE4 /* ViewModels */,
+				4415352A205C0BFB0093EFE4 /* ViewControllers */,
 				4415350A205ADE500093EFE4 /* AppDelegate.swift */,
 				44153511205ADE500093EFE4 /* Assets.xcassets */,
 				44153513205ADE500093EFE4 /* LaunchScreen.storyboard */,
@@ -73,6 +105,83 @@
 			path = theworkoutinfo;
 			sourceTree = "<group>";
 		};
+		4415352A205C0BFB0093EFE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44153537205C44760093EFE4 /* LoginViewController.swift */,
+				44153538205C44760093EFE4 /* LoginViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4415352B205C0C070093EFE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4415353B20601D860093EFE4 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4415352C205C0C120093EFE4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				4415352D205C0DA70093EFE4 /* BaseCoordinator.swift */,
+				4415352F205C0DB60093EFE4 /* AppCoordinator.swift */,
+				44153531205C0DC40093EFE4 /* LoginCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		4415353D2062A0970093EFE4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4415353E2062A7370093EFE4 /* AuthenticationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		441535402062AF0C0093EFE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				441535412062AF440093EFE4 /* AuthenticationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		444102C12073F5C0001837CD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				444102C22073F5D5001837CD /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		444102C22073F5D5001837CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		794C55274CCCFDF09C3E9830 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21C9A29E3C85AE9CAF9466BB /* Pods-theworkoutinfo.debug.xcconfig */,
+				22C52C7A5DC333C088AB513A /* Pods-theworkoutinfo.release.xcconfig */,
+				C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B3868BA2974993561143608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44153519205ADE500093EFE4 /* Build configuration list for PBXNativeTarget "theworkoutinfo" */;
 			buildPhases = (
+				835E4D3A4FFCB0B35F835816 /* [CP] Check Pods Manifest.lock */,
 				44153503205ADE500093EFE4 /* Sources */,
 				44153504205ADE500093EFE4 /* Frameworks */,
 				44153505205ADE500093EFE4 /* Resources */,
+				06CB285D78AA855B2551C465 /* [CP] Embed Pods Frameworks */,
+				48B1A44555994302EE50B96D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +246,7 @@
 			files = (
 				44153527205AF73F0093EFE4 /* Configuration-Testing.plist in Resources */,
 				44153529205AF7590093EFE4 /* Configuration-Release.plist in Resources */,
+				4415353A205C44760093EFE4 /* LoginViewController.xib in Resources */,
 				44153515205ADE500093EFE4 /* LaunchScreen.storyboard in Resources */,
 				44153512205ADE500093EFE4 /* Assets.xcassets in Resources */,
 				44153525205AF71F0093EFE4 /* Configuration-Debug.plist in Resources */,
@@ -142,14 +255,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06CB285D78AA855B2551C465 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48B1A44555994302EE50B96D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		835E4D3A4FFCB0B35F835816 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-theworkoutinfo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44153503205ADE500093EFE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44153539205C44760093EFE4 /* LoginViewController.swift in Sources */,
+				441535422062AF440093EFE4 /* AuthenticationHelper.swift in Sources */,
+				444102C42073F5F6001837CD /* UIViewController+ShowAlert.swift in Sources */,
+				44153532205C0DC40093EFE4 /* LoginCoordinator.swift in Sources */,
 				4415350B205ADE500093EFE4 /* AppDelegate.swift in Sources */,
+				4415353F2062A7370093EFE4 /* AuthenticationManager.swift in Sources */,
 				4415351F205AF46E0093EFE4 /* ConfigurationManager.swift in Sources */,
+				4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */,
+				44153530205C0DB60093EFE4 /* AppCoordinator.swift in Sources */,
 				44153523205AF58C0093EFE4 /* ConfigurationManager+Properties.swift in Sources */,
+				4415352E205C0DA70093EFE4 /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +453,7 @@
 		};
 		4415351A205ADE500093EFE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C9A29E3C85AE9CAF9466BB /* Pods-theworkoutinfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Debug";
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +469,7 @@
 		};
 		4415351B205ADE500093EFE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C52C7A5DC333C088AB513A /* Pods-theworkoutinfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Release";
 				CODE_SIGN_STYLE = Automatic;
@@ -356,6 +535,7 @@
 		};
 		4415351D205AE9450093EFE4 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Testing";
 				CODE_SIGN_STYLE = Automatic;

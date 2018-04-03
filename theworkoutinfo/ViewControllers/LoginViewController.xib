@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="theworkoutinfo" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="Nhp-nP-Jf7" id="3Ni-Fh-Bn6"/>
+                <outlet property="loginButton" destination="MKA-oJ-eu3" id="mHH-Ey-zTT"/>
+                <outlet property="passwordTextField" destination="yhE-5p-juL" id="aov-Uc-Wkg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-oJ-eu3">
+                    <rect key="frame" x="54" y="494" width="266" height="44"/>
+                    <color key="backgroundColor" red="0.92043947169999996" green="1" blue="0.38807318619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="266" id="brO-Xk-DE4"/>
+                        <constraint firstAttribute="height" constant="44" id="vAN-Qo-TEZ"/>
+                    </constraints>
+                    <state key="normal" title="Login"/>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-nP-Jf7">
+                    <rect key="frame" x="54" y="315" width="266" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="mfE-FP-SvA"/>
+                        <constraint firstAttribute="width" constant="266" id="u4X-6I-5zL"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhE-5p-juL">
+                    <rect key="frame" x="54" y="387" width="266" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="266" id="B4I-gy-aws"/>
+                        <constraint firstAttribute="height" constant="50" id="Ply-v3-urz"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppMainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="d7M-Bd-M03">
+                    <rect key="frame" x="107" y="69" width="160" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="YhC-dy-NC6"/>
+                        <constraint firstAttribute="width" secondItem="d7M-Bd-M03" secondAttribute="height" multiplier="1:1" id="gfa-Tk-y29"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.49145331352280808" green="0.81562015391854548" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MKA-oJ-eu3" firstAttribute="top" secondItem="yhE-5p-juL" secondAttribute="bottom" constant="57" id="7NX-JH-gMh"/>
+                <constraint firstItem="Nhp-nP-Jf7" firstAttribute="top" secondItem="d7M-Bd-M03" secondAttribute="bottom" constant="86" id="Bl1-dN-UbG"/>
+                <constraint firstItem="d7M-Bd-M03" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DEJ-Gr-bAp"/>
+                <constraint firstItem="yhE-5p-juL" firstAttribute="top" secondItem="Nhp-nP-Jf7" secondAttribute="bottom" constant="22" id="HHw-Io-Lii"/>
+                <constraint firstItem="d7M-Bd-M03" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="J0R-nL-xp6"/>
+                <constraint firstItem="Nhp-nP-Jf7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mzJ-4S-fai"/>
+                <constraint firstItem="MKA-oJ-eu3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sgS-sw-uZh"/>
+                <constraint firstItem="yhE-5p-juL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u5t-8A-eyN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AppMainIcon" width="250" height="250"/>
+    </resources>
+</document>

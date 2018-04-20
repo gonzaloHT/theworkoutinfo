@@ -16,10 +16,12 @@ extension UIViewController {
         let mainAction = UIAlertAction(title: buttonTitle, style: .default) { _ in
             completion?()
         }
+        
         if showCancelButton {
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
         }
+        
         alertController.addAction(mainAction)
         present(alertController, animated: true, completion: nil)
     }

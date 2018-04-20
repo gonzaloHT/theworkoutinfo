@@ -21,9 +21,25 @@
 		44153539205C44760093EFE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44153537205C44760093EFE4 /* LoginViewController.swift */; };
 		4415353A205C44760093EFE4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44153538205C44760093EFE4 /* LoginViewController.xib */; };
 		4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415353B20601D860093EFE4 /* LoginViewModel.swift */; };
-		4415353F2062A7370093EFE4 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415353E2062A7370093EFE4 /* AuthenticationManager.swift */; };
-		441535422062AF440093EFE4 /* AuthenticationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441535412062AF440093EFE4 /* AuthenticationHelper.swift */; };
+		4415353F2062A7370093EFE4 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415353E2062A7370093EFE4 /* AuthenticationRepository.swift */; };
 		444102C42073F5F6001837CD /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */; };
+		444102C720751779001837CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102C520751779001837CD /* HomeViewController.swift */; };
+		444102C820751779001837CD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444102C620751779001837CD /* HomeViewController.xib */; };
+		444102CA20751840001837CD /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102C920751840001837CD /* HomeCoordinator.swift */; };
+		444102CC20751A84001837CD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102CB20751A84001837CD /* HomeViewModel.swift */; };
+		444102D120753D95001837CD /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102CF20753D95001837CD /* FeedTableViewCell.swift */; };
+		444102D220753D95001837CD /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444102D020753D95001837CD /* FeedTableViewCell.xib */; };
+		444102D420754332001837CD /* ContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102D320754332001837CD /* ContentRepository.swift */; };
+		444102D720754628001837CD /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102D620754628001837CD /* Exercise.swift */; };
+		444102DB2077D915001837CD /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102DA2077D915001837CD /* RequestHelper.swift */; };
+		444102E1207BA17C001837CD /* MoyaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102E0207BA17C001837CD /* MoyaHelper.swift */; };
+		444102E3207CF4DD001837CD /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102E2207CF4DD001837CD /* Mappable.swift */; };
+		444102E5207D3BB3001837CD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102E4207D3BB3001837CD /* Result.swift */; };
+		444102E7207D3BD1001837CD /* ResultCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102E6207D3BD1001837CD /* ResultCollection.swift */; };
+		444102E9207D3C5B001837CD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102E8207D3C5B001837CD /* APIError.swift */; };
+		444102EB207FE5EE001837CD /* ExerciseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EA207FE5EE001837CD /* ExerciseImage.swift */; };
+		444102ED2088E2AE001837CD /* UIColor+AppAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */; };
+		444102EF2088FD4A001837CD /* TWINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EE2088FD4A001837CD /* TWINavigationController.swift */; };
 		666208B10412D381CEFB0318 /* Pods_theworkoutinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +62,25 @@
 		44153537205C44760093EFE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		44153538205C44760093EFE4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4415353B20601D860093EFE4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		4415353E2062A7370093EFE4 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		441535412062AF440093EFE4 /* AuthenticationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHelper.swift; sourceTree = "<group>"; };
+		4415353E2062A7370093EFE4 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
+		444102C520751779001837CD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		444102C620751779001837CD /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		444102C920751840001837CD /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		444102CB20751A84001837CD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		444102CF20753D95001837CD /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		444102D020753D95001837CD /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		444102D320754332001837CD /* ContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepository.swift; sourceTree = "<group>"; };
+		444102D620754628001837CD /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		444102DA2077D915001837CD /* RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		444102E0207BA17C001837CD /* MoyaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHelper.swift; sourceTree = "<group>"; };
+		444102E2207CF4DD001837CD /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		444102E4207D3BB3001837CD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		444102E6207D3BD1001837CD /* ResultCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollection.swift; sourceTree = "<group>"; };
+		444102E8207D3C5B001837CD /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		444102EA207FE5EE001837CD /* ExerciseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImage.swift; sourceTree = "<group>"; };
+		444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppAdditions.swift"; sourceTree = "<group>"; };
+		444102EE2088FD4A001837CD /* TWINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWINavigationController.swift; sourceTree = "<group>"; };
 		74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theworkoutinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.testing.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.testing.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,12 +118,13 @@
 		44153509205ADE500093EFE4 /* theworkoutinfo */ = {
 			isa = PBXGroup;
 			children = (
+				4415352C205C0C120093EFE4 /* Coordinators */,
+				4415352A205C0BFB0093EFE4 /* ViewControllers */,
+				4415352B205C0C070093EFE4 /* ViewModels */,
+				444102D5207545FB001837CD /* Model */,
 				444102C12073F5C0001837CD /* Shared */,
 				441535402062AF0C0093EFE4 /* Helpers */,
-				4415353D2062A0970093EFE4 /* Managers */,
-				4415352C205C0C120093EFE4 /* Coordinators */,
-				4415352B205C0C070093EFE4 /* ViewModels */,
-				4415352A205C0BFB0093EFE4 /* ViewControllers */,
+				4415353D2062A0970093EFE4 /* Repositories */,
 				4415350A205ADE500093EFE4 /* AppDelegate.swift */,
 				44153511205ADE500093EFE4 /* Assets.xcassets */,
 				44153513205ADE500093EFE4 /* LaunchScreen.storyboard */,
@@ -108,8 +141,11 @@
 		4415352A205C0BFB0093EFE4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				444102CD20753D63001837CD /* Views */,
 				44153537205C44760093EFE4 /* LoginViewController.swift */,
 				44153538205C44760093EFE4 /* LoginViewController.xib */,
+				444102C520751779001837CD /* HomeViewController.swift */,
+				444102C620751779001837CD /* HomeViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				4415353B20601D860093EFE4 /* LoginViewModel.swift */,
+				444102CB20751A84001837CD /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -128,22 +165,25 @@
 				4415352D205C0DA70093EFE4 /* BaseCoordinator.swift */,
 				4415352F205C0DB60093EFE4 /* AppCoordinator.swift */,
 				44153531205C0DC40093EFE4 /* LoginCoordinator.swift */,
+				444102C920751840001837CD /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		4415353D2062A0970093EFE4 /* Managers */ = {
+		4415353D2062A0970093EFE4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				4415353E2062A7370093EFE4 /* AuthenticationManager.swift */,
+				4415353E2062A7370093EFE4 /* AuthenticationRepository.swift */,
+				444102D320754332001837CD /* ContentRepository.swift */,
 			);
-			path = Managers;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		441535402062AF0C0093EFE4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				441535412062AF440093EFE4 /* AuthenticationHelper.swift */,
+				444102DA2077D915001837CD /* RequestHelper.swift */,
+				444102E0207BA17C001837CD /* MoyaHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -152,6 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				444102C22073F5D5001837CD /* Extensions */,
+				444102E4207D3BB3001837CD /* Result.swift */,
+				444102E6207D3BD1001837CD /* ResultCollection.swift */,
+				444102E8207D3C5B001837CD /* APIError.swift */,
+				444102EE2088FD4A001837CD /* TWINavigationController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -160,8 +204,36 @@
 			isa = PBXGroup;
 			children = (
 				444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */,
+				444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		444102CD20753D63001837CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				444102CE20753D6B001837CD /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		444102CE20753D6B001837CD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				444102CF20753D95001837CD /* FeedTableViewCell.swift */,
+				444102D020753D95001837CD /* FeedTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		444102D5207545FB001837CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				444102D620754628001837CD /* Exercise.swift */,
+				444102E2207CF4DD001837CD /* Mappable.swift */,
+				444102EA207FE5EE001837CD /* ExerciseImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		794C55274CCCFDF09C3E9830 /* Pods */ = {
@@ -249,6 +321,8 @@
 				4415353A205C44760093EFE4 /* LoginViewController.xib in Resources */,
 				44153515205ADE500093EFE4 /* LaunchScreen.storyboard in Resources */,
 				44153512205ADE500093EFE4 /* Assets.xcassets in Resources */,
+				444102D220753D95001837CD /* FeedTableViewCell.xib in Resources */,
+				444102C820751779001837CD /* HomeViewController.xib in Resources */,
 				44153525205AF71F0093EFE4 /* Configuration-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,13 +337,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -317,16 +401,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				44153539205C44760093EFE4 /* LoginViewController.swift in Sources */,
-				441535422062AF440093EFE4 /* AuthenticationHelper.swift in Sources */,
+				444102E3207CF4DD001837CD /* Mappable.swift in Sources */,
 				444102C42073F5F6001837CD /* UIViewController+ShowAlert.swift in Sources */,
+				444102D720754628001837CD /* Exercise.swift in Sources */,
+				444102E9207D3C5B001837CD /* APIError.swift in Sources */,
+				444102E7207D3BD1001837CD /* ResultCollection.swift in Sources */,
+				444102E5207D3BB3001837CD /* Result.swift in Sources */,
 				44153532205C0DC40093EFE4 /* LoginCoordinator.swift in Sources */,
+				444102D120753D95001837CD /* FeedTableViewCell.swift in Sources */,
+				444102ED2088E2AE001837CD /* UIColor+AppAdditions.swift in Sources */,
+				444102D420754332001837CD /* ContentRepository.swift in Sources */,
 				4415350B205ADE500093EFE4 /* AppDelegate.swift in Sources */,
-				4415353F2062A7370093EFE4 /* AuthenticationManager.swift in Sources */,
+				444102E1207BA17C001837CD /* MoyaHelper.swift in Sources */,
+				4415353F2062A7370093EFE4 /* AuthenticationRepository.swift in Sources */,
 				4415351F205AF46E0093EFE4 /* ConfigurationManager.swift in Sources */,
 				4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */,
+				444102CA20751840001837CD /* HomeCoordinator.swift in Sources */,
+				444102EB207FE5EE001837CD /* ExerciseImage.swift in Sources */,
+				444102CC20751A84001837CD /* HomeViewModel.swift in Sources */,
+				444102EF2088FD4A001837CD /* TWINavigationController.swift in Sources */,
+				444102DB2077D915001837CD /* RequestHelper.swift in Sources */,
 				44153530205C0DB60093EFE4 /* AppCoordinator.swift in Sources */,
 				44153523205AF58C0093EFE4 /* ConfigurationManager+Properties.swift in Sources */,
 				4415352E205C0DA70093EFE4 /* BaseCoordinator.swift in Sources */,
+				444102C720751779001837CD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

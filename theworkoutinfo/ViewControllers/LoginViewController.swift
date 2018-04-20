@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var appImageView: UIImageView!
     
     var disposeBag = DisposeBag()
     var viewModel: LoginViewModel
@@ -35,11 +36,20 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupUI()
         setupBindings()
     }
     
     //MARK: - Setup
+    
+    func setupUI() {
+        self.view.backgroundColor = UIColor.greenAppColor()
+        appImageView.layer.cornerRadius = appImageView.frame.size.width/2
+        appImageView.layer.masksToBounds = true
+        appImageView.layer.borderWidth = 4
+        appImageView.layer.borderColor = UIColor.yellowAppColor().cgColor
+    }
     
     func setupBindings() {
         emailTextField.rx.text

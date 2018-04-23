@@ -19,20 +19,31 @@ final class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let loginCoordinator = LoginCoordinator(window: window)
+        if AuthenticationRepository.sharedInstance.isUserLoggedIn() {
+             showHome()
+        } else {
+            showLogin()
+        }
         
-        let loginCoordinatorDidFinish = coordinate(to: loginCoordinator).observeOn(MainScheduler.instance)
-        
-        loginCoordinatorDidFinish.do(onNext: { [weak self] in
-            self?.showHome()
-        }).subscribe()
-            .disposed(by: disposeBag)
         return Observable.never()
     }
     
+    private func showLogin() {
+        let loginCoordinator = LoginCoordinator(window: window)
+        let loginCoordinatorDidFinish = coordinate(to: loginCoordinator).observeOn(MainScheduler.instance)
+        loginCoordinatorDidFinish.do(onNext: { [weak self] in
+            return self?.showHome()
+        }).subscribe()
+            .disposed(by: disposeBag)
+    }
+    
     private func showHome() {
-        //TODO: Home Screen
-        print("presenting home")
+        let homeCoordinator = HomeCoordinator(window: window)
+        let homeCoordinatorDidFinished = coordinate(to: homeCoordinator)
+        homeCoordinatorDidFinished.do(onNext: { (_) -> Void in
+            _ = self.start()
+        }).subscribe()
+            .disposed(by: disposeBag)
     }
         
 }

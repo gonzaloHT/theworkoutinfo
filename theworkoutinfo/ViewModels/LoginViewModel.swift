@@ -37,17 +37,17 @@ class LoginViewModel {
         let _tryLogin = PublishSubject<Void>()
         tryLogin = _tryLogin.asObserver()
         
-        didLogin = AuthenticationManager.sharedInstance.signInResult.filter {
+        didLogin = AuthenticationRepository.sharedInstance.signInResult.filter {
             $0 == .success
-            }.map {_ in }
+            }.map { _ in }
         
-        errorMessage = AuthenticationManager.sharedInstance.signInResult.filter {$0 != .success}.map {result in
+        errorMessage = AuthenticationRepository.sharedInstance.signInResult.filter {$0 != .success}.map {result in
             return "Wrong credentials"
         }
         
-        _tryLogin.asObservable().map { [weak self] () -> AuthenticationManager.AuthenticationCredentials in
-            AuthenticationManager.AuthenticationCredentials(email: self?.email.value ?? "", password: self?.password.value ?? "")
-            }.bind(to: AuthenticationManager.sharedInstance.trySigning).disposed(by: disposeBag)
+        _tryLogin.asObservable().map { [weak self] () -> AuthenticationRepository.AuthenticationCredentials in
+            AuthenticationRepository.AuthenticationCredentials(email: self?.email.value ?? "", password: self?.password.value ?? "")
+            }.bind(to: AuthenticationRepository.sharedInstance.trySigning).disposed(by: disposeBag)
     }
     
 }

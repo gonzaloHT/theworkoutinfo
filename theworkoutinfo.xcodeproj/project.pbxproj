@@ -40,6 +40,9 @@
 		444102EB207FE5EE001837CD /* ExerciseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EA207FE5EE001837CD /* ExerciseImage.swift */; };
 		444102ED2088E2AE001837CD /* UIColor+AppAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */; };
 		444102EF2088FD4A001837CD /* TWINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EE2088FD4A001837CD /* TWINavigationController.swift */; };
+		4453C71B208F697500A2A091 /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453C719208F697500A2A091 /* ExerciseDetailViewController.swift */; };
+		4453C71C208F697500A2A091 /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4453C71A208F697500A2A091 /* ExerciseDetailViewController.xib */; };
+		44B00E9D20A333D500D6344D /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00E9C20A333D500D6344D /* ExerciseDetailViewModel.swift */; };
 		666208B10412D381CEFB0318 /* Pods_theworkoutinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		444102EA207FE5EE001837CD /* ExerciseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImage.swift; sourceTree = "<group>"; };
 		444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppAdditions.swift"; sourceTree = "<group>"; };
 		444102EE2088FD4A001837CD /* TWINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWINavigationController.swift; sourceTree = "<group>"; };
+		4453C719208F697500A2A091 /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		4453C71A208F697500A2A091 /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
+		44B00E9C20A333D500D6344D /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
 		74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theworkoutinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.testing.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.testing.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,8 @@
 				44153538205C44760093EFE4 /* LoginViewController.xib */,
 				444102C520751779001837CD /* HomeViewController.swift */,
 				444102C620751779001837CD /* HomeViewController.xib */,
+				4453C719208F697500A2A091 /* ExerciseDetailViewController.swift */,
+				4453C71A208F697500A2A091 /* ExerciseDetailViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			children = (
 				4415353B20601D860093EFE4 /* LoginViewModel.swift */,
 				444102CB20751A84001837CD /* HomeViewModel.swift */,
+				44B00E9C20A333D500D6344D /* ExerciseDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -321,6 +330,7 @@
 				4415353A205C44760093EFE4 /* LoginViewController.xib in Resources */,
 				44153515205ADE500093EFE4 /* LaunchScreen.storyboard in Resources */,
 				44153512205ADE500093EFE4 /* Assets.xcassets in Resources */,
+				4453C71C208F697500A2A091 /* ExerciseDetailViewController.xib in Resources */,
 				444102D220753D95001837CD /* FeedTableViewCell.xib in Resources */,
 				444102C820751779001837CD /* HomeViewController.xib in Resources */,
 				44153525205AF71F0093EFE4 /* Configuration-Debug.plist in Resources */,
@@ -338,6 +348,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -348,6 +359,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -409,11 +421,13 @@
 				444102E5207D3BB3001837CD /* Result.swift in Sources */,
 				44153532205C0DC40093EFE4 /* LoginCoordinator.swift in Sources */,
 				444102D120753D95001837CD /* FeedTableViewCell.swift in Sources */,
+				4453C71B208F697500A2A091 /* ExerciseDetailViewController.swift in Sources */,
 				444102ED2088E2AE001837CD /* UIColor+AppAdditions.swift in Sources */,
 				444102D420754332001837CD /* ContentRepository.swift in Sources */,
 				4415350B205ADE500093EFE4 /* AppDelegate.swift in Sources */,
 				444102E1207BA17C001837CD /* MoyaHelper.swift in Sources */,
 				4415353F2062A7370093EFE4 /* AuthenticationRepository.swift in Sources */,
+				44B00E9D20A333D500D6344D /* ExerciseDetailViewModel.swift in Sources */,
 				4415351F205AF46E0093EFE4 /* ConfigurationManager.swift in Sources */,
 				4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */,
 				444102CA20751840001837CD /* HomeCoordinator.swift in Sources */,

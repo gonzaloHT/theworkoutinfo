@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import ESPullToRefresh
 
 class HomeViewController: UIViewController {
     
@@ -19,6 +21,8 @@ class HomeViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     var viewModel: HomeViewModel
+    var rc = UIRefreshControl()
+    var pageNumber = 1
     
     //MARK: - LifeCycle
     
@@ -49,14 +53,35 @@ class HomeViewController: UIViewController {
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = UIColor.lightGray
         tableView.tableFooterView = UIView()
+        tableView.addSubview(rc)
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            self.pageNumber += 1
+            self.viewModel.loadExercises.onNext(self.pageNumber)
+        }
     }
     
     func setupBindings() {
-        viewModel.loadExercises.onNext(())
+        viewModel.exercises.asObservable().subscribe(onNext: { _ in
+            self.rc.endRefreshing()
+            self.tableView.es.stopLoadingMore()
+            print("It Worked!")
+        }).disposed(by: disposeBag)
+        
+        rc.rx.controlEvent(.valueChanged).subscribe({ _ in
+            self.viewModel.loadExercises.onNext(1)
+        }).disposed(by: disposeBag)
+        
+        self.viewModel.loadExercises.onNext(pageNumber)
         
         viewModel.exercises.bind(to: tableView.rx.items(cellIdentifier: FeedTableViewCell.cellReuseIdentifier, cellType: FeedTableViewCell.self)) { (row, exercise, cell) in
             cell.setup(withExercise: exercise)
+            cell.selectionStyle = .none
         }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(Exercise.self)
+            .bind(to: viewModel.selectExercise)
+            .disposed(by: disposeBag)
     }
     
     //MARK: - Actions

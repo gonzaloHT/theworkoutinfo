@@ -16,12 +16,13 @@ class HomeViewModel {
     //MARK: - Inputs
     
     let tryLogout: AnyObserver<Void>
-    let loadExercises: AnyObserver<Void>
+    let loadExercises: AnyObserver<Int>
+    let selectExercise: AnyObserver<Exercise>
     
     //MARK: - Outputs
     
     let didLogout: Observable<Void>
-    
+    let didSelectExercise: Observable<Exercise>
     var exercises: Observable<[Exercise]> {
         return _exercisesVariable.asObservable()
     }
@@ -30,10 +31,11 @@ class HomeViewModel {
         return _error.asObservable()
     }
     
-    //MARK: Properties
+    //MARK: - Properties
         
     private let _error = PublishSubject<String>()
     private let _exercisesVariable = Variable<[Exercise]>([])
+    private let page = Variable<Int>(1)
     
     init() {
         let _tryLogout = PublishSubject<Void>()
@@ -43,15 +45,28 @@ class HomeViewModel {
             AuthenticationRepository.logout()
         })
         
-        let _loadExercises = PublishSubject<Void>()
+        let _loadExercises = PublishSubject<Int>()
         loadExercises = _loadExercises.asObserver()
         
-        _loadExercises.asObservable().flatMap({ _ in
-            ContentRepository.sharedInstance.getExercisesWithImages()
-        }).map({ [weak self] resultCollection -> [Exercise] in
+        let _selectExercise = PublishSubject<Exercise>()
+        selectExercise = _selectExercise.asObserver()
+        didSelectExercise = _selectExercise.asObservable().map { (exercise) -> Exercise in
+            return exercise
+        }
+        
+        _loadExercises.asObservable().flatMap { n ->
+            Observable<ResultCollection<Exercise>>  in
+            self.page.value = n
+            return ContentRepository.sharedInstance.getExercisesWithImages(pageNumber: n)
+        }.map({ [weak self] resultCollection -> [Exercise] in
             switch resultCollection {
             case .success(let exercises):
-                return exercises
+                guard let strongSelf = self else {
+                    return []
+                }
+                
+                (strongSelf.page.value == 1) ? strongSelf._exercisesVariable.value = exercises : strongSelf._exercisesVariable.value.append(contentsOf: exercises)
+                return strongSelf._exercisesVariable.value
             case .error(let error):
                 self?._error.asObserver().onNext(error.errorType.rawValue)
                 return []

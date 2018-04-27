@@ -34,6 +34,13 @@ class HomeCoordinator: BaseCoordinator<HomeCoordinatorResult> {
             return HomeCoordinatorResult.logout
         }
         
+        _ = viewModel.didSelectExercise.do(onNext: {(exercise) -> Void in
+            
+            let exerciseDetailViewModel = ExerciseDetailViewModel(exercise: exercise)
+            let exerciseDetailViewController = ExerciseDetailViewController(viewModel: exerciseDetailViewModel)
+            navigationController.pushViewController(exerciseDetailViewController, animated: true)
+        }).subscribe()
+        
         return didLogout
     }
 

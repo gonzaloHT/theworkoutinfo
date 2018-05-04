@@ -23,7 +23,7 @@ extension ResultCollection where T: Mappable {
             if let results = json["results"].array {
                 self = .success(results.flatMap { T.init(json: $0) })
             } else {
-                self = .error(APIError(type: .noType))
+                self = .error(APIError(type: .exerciseNotFound))
             }
         } else {
             self = .error(APIError(type: .noType))

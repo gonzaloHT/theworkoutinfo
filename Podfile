@@ -11,6 +11,7 @@ target 'theworkoutinfo' do
   pod 'SwiftyJSON'
   pod 'Kingfisher'
   pod 'ESPullToRefresh'
+  pod 'SVProgressHUD'
   
   # Pods for theworkoutinfo
 

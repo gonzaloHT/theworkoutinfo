@@ -27,7 +27,7 @@ extension Result where T: Mappable {
                     self = .error(APIError(json: json))
                 }
             } else {
-                self = .error(APIError(type: .noType))
+                self = .error(APIError(type: .exerciseNotFound))
             }
         }else{
             self = .error(APIError(type: .noType))

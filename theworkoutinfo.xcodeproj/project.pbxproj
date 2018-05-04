@@ -40,9 +40,12 @@
 		444102EB207FE5EE001837CD /* ExerciseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EA207FE5EE001837CD /* ExerciseImage.swift */; };
 		444102ED2088E2AE001837CD /* UIColor+AppAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */; };
 		444102EF2088FD4A001837CD /* TWINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444102EE2088FD4A001837CD /* TWINavigationController.swift */; };
+		44529E7420A07F9000588C06 /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44529E7320A07F9000588C06 /* Reactive+UIViewController.swift */; };
 		4453C71B208F697500A2A091 /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4453C719208F697500A2A091 /* ExerciseDetailViewController.swift */; };
 		4453C71C208F697500A2A091 /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4453C71A208F697500A2A091 /* ExerciseDetailViewController.xib */; };
 		44B00E9D20A333D500D6344D /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00E9C20A333D500D6344D /* ExerciseDetailViewModel.swift */; };
+		4456645A209CDAC300083799 /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44566459209CDAC300083799 /* UIViewController+Loader.swift */; };
+		44F151EA209A082400CB2C39 /* ExerciseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F151E9209A082400CB2C39 /* ExerciseCategory.swift */; };
 		666208B10412D381CEFB0318 /* Pods_theworkoutinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,9 +87,12 @@
 		444102EA207FE5EE001837CD /* ExerciseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImage.swift; sourceTree = "<group>"; };
 		444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppAdditions.swift"; sourceTree = "<group>"; };
 		444102EE2088FD4A001837CD /* TWINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWINavigationController.swift; sourceTree = "<group>"; };
+		44529E7320A07F9000588C06 /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
 		4453C719208F697500A2A091 /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		4453C71A208F697500A2A091 /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
 		44B00E9C20A333D500D6344D /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		44566459209CDAC300083799 /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
+		44F151E9209A082400CB2C39 /* ExerciseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCategory.swift; sourceTree = "<group>"; };
 		74836A4F6C66C53A28EF3CCD /* Pods_theworkoutinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theworkoutinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13F12359282416350E4CECB /* Pods-theworkoutinfo.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theworkoutinfo.testing.xcconfig"; path = "Pods/Target Support Files/Pods-theworkoutinfo/Pods-theworkoutinfo.testing.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,8 @@
 			children = (
 				444102C32073F5F6001837CD /* UIViewController+ShowAlert.swift */,
 				444102EC2088E2AE001837CD /* UIColor+AppAdditions.swift */,
+				44566459209CDAC300083799 /* UIViewController+Loader.swift */,
+				44529E7320A07F9000588C06 /* Reactive+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				444102D620754628001837CD /* Exercise.swift */,
 				444102E2207CF4DD001837CD /* Mappable.swift */,
 				444102EA207FE5EE001837CD /* ExerciseImage.swift */,
+				44F151E9209A082400CB2C39 /* ExerciseCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -365,6 +375,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,10 +442,13 @@
 				4415351F205AF46E0093EFE4 /* ConfigurationManager.swift in Sources */,
 				4415353C20601D860093EFE4 /* LoginViewModel.swift in Sources */,
 				444102CA20751840001837CD /* HomeCoordinator.swift in Sources */,
+				44529E7420A07F9000588C06 /* Reactive+UIViewController.swift in Sources */,
 				444102EB207FE5EE001837CD /* ExerciseImage.swift in Sources */,
 				444102CC20751A84001837CD /* HomeViewModel.swift in Sources */,
 				444102EF2088FD4A001837CD /* TWINavigationController.swift in Sources */,
 				444102DB2077D915001837CD /* RequestHelper.swift in Sources */,
+				44F151EA209A082400CB2C39 /* ExerciseCategory.swift in Sources */,
+				4456645A209CDAC300083799 /* UIViewController+Loader.swift in Sources */,
 				44153530205C0DB60093EFE4 /* AppCoordinator.swift in Sources */,
 				44153523205AF58C0093EFE4 /* ConfigurationManager+Properties.swift in Sources */,
 				4415352E205C0DA70093EFE4 /* BaseCoordinator.swift in Sources */,

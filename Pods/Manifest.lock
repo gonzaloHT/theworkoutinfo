@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.1)
+  - ESPullToRefresh (2.7)
   - Kingfisher (4.7.0)
   - Moya/Core (10.0.2):
     - Alamofire (~> 4.1)
@@ -14,6 +15,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - ESPullToRefresh
   - Kingfisher
   - Moya/RxSwift (~> 10.0)
   - RxCocoa (~> 4.0)
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -29,6 +32,6 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 84824e204043a93d7640f2262ccd8b415bde36ba
+PODFILE CHECKSUM: 3700d3d2948ce60eaa2579d493e751d84cc5d1a7
 
 COCOAPODS: 1.4.0

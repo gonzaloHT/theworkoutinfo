@@ -10,6 +10,7 @@ target 'theworkoutinfo' do
   pod 'Moya/RxSwift', '~> 10.0'
   pod 'SwiftyJSON'
   pod 'Kingfisher'
+  pod 'ESPullToRefresh'
   
   # Pods for theworkoutinfo
 

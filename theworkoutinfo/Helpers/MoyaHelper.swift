@@ -11,7 +11,7 @@ import Moya
 import SwiftyJSON
 
 enum APIService {
-    case exercises
+    case exercises(pageNumber: Int)
     case exerciseImage(exerciseId: String)
 }
 
@@ -21,7 +21,7 @@ extension APIService: TargetType {
         switch self {
         case .exercises:
             return "exercise/"
-        case .exerciseImage(_):
+        case .exerciseImage:
             return "exerciseimage/"
         }
     }
@@ -35,8 +35,8 @@ extension APIService: TargetType {
     
     var task: Task {
         switch self {
-        case .exercises:
-            return .requestPlain
+        case let .exercises(pageNumber):
+            return .requestParameters(parameters: ["page" : pageNumber], encoding: URLEncoding.default)
         case let .exerciseImage(exerciseId):
             return .requestParameters(parameters: ["exercise" : exerciseId], encoding: URLEncoding.default)
         }

@@ -17,8 +17,8 @@ class ContentRepository {
     
     var disposeBag = DisposeBag()
     
-    func getExercisesWithImages(pageNumber: Int) -> Observable<ResultCollection<Exercise>> {
-        return RequestHelper.sharedInstance.performRequestCollection(service: .exercises(pageNumber: pageNumber)).flatMap({ (result: ResultCollection<Exercise>) -> Observable<ResultCollection<Exercise>> in
+    func getExercisesByCategoryId(categoryId: Int?, pageNumber: Int) -> Observable<ResultCollection<Exercise>> {
+        return RequestHelper.sharedInstance.performRequestCollection(service: .exercisesByCategory(categoryId: categoryId, pageNumber: pageNumber)).flatMap({ (result: ResultCollection<Exercise>) -> Observable<ResultCollection<Exercise>> in
             if case .success(let exercises) = result {
                 return Observable.from(exercises).flatMap({ (exercise) -> Observable<Exercise> in
                     return RequestHelper.sharedInstance.performRequestCollection(service: .exerciseImage(exerciseId: exercise.id))
@@ -37,5 +37,10 @@ class ContentRepository {
             return Observable.from(optional: result)
         })
     }
-
+    
+    func getExercisesCategories() -> Observable<ResultCollection<ExerciseCategory>> {
+        return RequestHelper.sharedInstance.performRequestCollection(service: .exerciseCategories).flatMap({ (result: ResultCollection<ExerciseCategory>) -> Observable<ResultCollection<ExerciseCategory>> in
+            return Observable.just(result)
+        })
+    }
 }

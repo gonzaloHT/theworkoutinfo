@@ -13,4 +13,7 @@ class Mappable {
     required init?(json: JSON) {
     }
     
+    init() {
+    }
+    
 }

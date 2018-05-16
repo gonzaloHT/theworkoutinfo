@@ -6,13 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="theworkoutinfo" customModuleProvider="target">
             <connections>
+                <outlet property="categoryTextField" destination="2Ew-kD-UyZ" id="35a-kp-erY"/>
+                <outlet property="filterView" destination="mLe-BN-dzf" id="1aN-ve-C0U"/>
                 <outlet property="tableView" destination="YpP-t8-bjK" id="gKD-FD-0Bg"/>
+                <outlet property="tableViewTopSpaceConstraint" destination="fWu-zq-2kp" id="vlv-A9-bw1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,20 +25,46 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLe-BN-dzf">
+                    <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-kD-UyZ">
+                            <rect key="frame" x="76" y="20" width="223" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Mdt-SM-xOq"/>
+                                <constraint firstAttribute="width" secondItem="2Ew-kD-UyZ" secondAttribute="height" multiplier="223:30" id="j46-hD-VjZ"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="2Ew-kD-UyZ" firstAttribute="centerY" secondItem="mLe-BN-dzf" secondAttribute="centerY" id="HV4-tV-KE3"/>
+                        <constraint firstAttribute="height" constant="70" id="SwQ-fs-MHj"/>
+                        <constraint firstItem="2Ew-kD-UyZ" firstAttribute="centerX" secondItem="mLe-BN-dzf" secondAttribute="centerX" id="hcg-Cu-ten"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Zqg-bg-SSQ"/>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YpP-t8-bjK">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" red="0.1214280004" green="0.1201399922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YpP-t8-bjK" secondAttribute="bottom" id="3Lz-9d-xrz"/>
+                <constraint firstItem="mLe-BN-dzf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5D6-JN-OeL"/>
+                <constraint firstItem="mLe-BN-dzf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KMq-1R-aGs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YpP-t8-bjK" secondAttribute="trailing" id="caI-fa-BZR"/>
                 <constraint firstItem="YpP-t8-bjK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ebf-QA-N5O"/>
                 <constraint firstItem="YpP-t8-bjK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fWu-zq-2kp"/>
+                <constraint firstItem="mLe-BN-dzf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tG4-4G-grD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="45.5" y="59.5"/>
         </view>
     </objects>
 </document>

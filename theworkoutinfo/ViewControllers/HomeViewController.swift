@@ -16,13 +16,18 @@ class HomeViewController: UIViewController {
     //MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var filterView: UIView!
+    @IBOutlet weak var tableViewTopSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var categoryTextField: UITextField!
     
     //MARK: - Vars
     
     var disposeBag = DisposeBag()
     var viewModel: HomeViewModel
     var rc = UIRefreshControl()
-    var pageNumber = 1
+    var categoryPickerView = UIPickerView()
+    var filterButton = UIBarButtonItem()
+    var logoutButton = UIBarButtonItem()
     
     //MARK: - LifeCycle
     
@@ -47,8 +52,13 @@ class HomeViewController: UIViewController {
     
     fileprivate func setupUI() {
         title = "The Workout Info"
-        let leftButton = UIBarButtonItem(image: UIImage(named: "Logout-Icon"), style: .plain, target: self, action:#selector(logout))
-        navigationItem.leftBarButtonItem = leftButton;
+        
+        logoutButton = UIBarButtonItem(image: UIImage(named: "Logout-Icon"), style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = logoutButton;
+        
+        filterButton = UIBarButtonItem(image: UIImage(named: "FilterIcon"), style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = filterButton;
+        
         tableView.register(UINib(nibName: FeedTableViewCell.cellNibName, bundle: nil), forCellReuseIdentifier: FeedTableViewCell.cellReuseIdentifier)
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = UIColor.lightGray
@@ -56,38 +66,90 @@ class HomeViewController: UIViewController {
         tableView.addSubview(rc)
         self.tableView.es.addInfiniteScrolling {
             [unowned self] in
-            self.pageNumber += 1
-            self.viewModel.loadExercises.onNext(self.pageNumber)
+            self.viewModel.loadMoreExercises.onNext(())
         }
+        
+        categoryTextField.inputView = categoryPickerView
+        categoryTextField.text = "Select a category"
+        filterView.backgroundColor = UIColor.greenAppColor()
     }
     
     func setupBindings() {
+        
+        viewModel.isLoading.bind(to: self.rx.isLoading)
+            .disposed(by: disposeBag)
+        
+        viewModel.loadCategories.onNext(())
+        
         viewModel.exercises.asObservable().subscribe(onNext: { _ in
             self.rc.endRefreshing()
             self.tableView.es.stopLoadingMore()
-            print("It Worked!")
         }).disposed(by: disposeBag)
         
         rc.rx.controlEvent(.valueChanged).subscribe({ _ in
-            self.viewModel.loadExercises.onNext(1)
+            self.viewModel.reloadExercises.onNext(())
         }).disposed(by: disposeBag)
         
-        self.viewModel.loadExercises.onNext(pageNumber)
+        viewModel.categories.asObservable().bind(to: categoryPickerView.rx.itemTitles) { _, item in
+            return item.name
+            }.disposed(by: disposeBag)
+        
+        categoryPickerView.rx.modelSelected(ExerciseCategory.self)
+            .subscribe(onNext: {
+                categoriesSelected in
+                
+                guard let category = categoriesSelected.first else {
+                    return
+                }
+                
+                self.viewModel.selectCategory.onNext((category))
+                self.view.endEditing(true)
+            }).disposed(by: disposeBag)
+        
+        viewModel.didSelectCategory.subscribe(onNext: { (category) in
+            (category.id == -1) ? (self.categoryTextField.text = "Select a category") : (self.categoryTextField.text = category.name)
+        }).disposed(by: disposeBag)
         
         viewModel.exercises.bind(to: tableView.rx.items(cellIdentifier: FeedTableViewCell.cellReuseIdentifier, cellType: FeedTableViewCell.self)) { (row, exercise, cell) in
             cell.setup(withExercise: exercise)
             cell.selectionStyle = .none
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(Exercise.self)
-            .bind(to: viewModel.selectExercise)
+        tableView.rx.modelSelected(Exercise.self).do(onNext: { [weak self] _ in
+            self?.view.endEditing(true)
+        }).bind(to: viewModel.selectExercise)
             .disposed(by: disposeBag)
+        
+        viewModel.error.asObservable().subscribe(onNext: { error in
+            self.showAlert(withTitle: "Error", message: error, buttonTitle: "OK")
+        }).disposed(by: disposeBag)
+        
+        logoutButton.rx.tap.bind(to: viewModel.tryLogout)
+            .disposed(by: disposeBag)
+        
+        filterButton.rx.tap.bind(to: viewModel.tryShowFilterView)
+            .disposed(by: disposeBag)
+        
+        viewModel.shouldShowFilterView.subscribe(onNext: { _ in
+            self.showFilterByView()
+        }).disposed(by: disposeBag)
     }
     
-    //MARK: - Actions
+    //MARK: - Private Funcs
     
-    @objc func logout() {
-        viewModel.tryLogout.onNext(())
+    private func showFilterByView() {
+        if tableViewTopSpaceConstraint.constant == 0 {
+            tableViewTopSpaceConstraint.constant = 70
+        } else {
+            tableViewTopSpaceConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }

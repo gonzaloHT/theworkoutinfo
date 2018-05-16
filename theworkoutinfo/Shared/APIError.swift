@@ -12,7 +12,7 @@ import SwiftyJSON
 class APIError: NSError {
     
     enum ErrorType: String {
-        case exerciseNotFound = "Not found"
+        case exerciseNotFound = "Exercises Not found"
         case noType = "noType"
     }
     
@@ -31,7 +31,7 @@ class APIError: NSError {
         let errorMessage = message != nil ? message! : APIError.defaultErrorMessage
         let userInfo = [NSLocalizedDescriptionKey: errorMessage]
         let errorCode = code != nil ? code! : APIError.defaultErrorCode
-        errorType = .noType
+        errorType = .exerciseNotFound
         super.init(domain: APIError.errorDomain, code: errorCode, userInfo: userInfo)
     }
     
